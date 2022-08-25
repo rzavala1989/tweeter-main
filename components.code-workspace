@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "components",
+		"path": "..\\..\\Downloads\\Tweeter-frontend-main\\src\\components"
+	},
+	{
+		"name": "tweeter-main",
+		"path": "."
+	}
+],
+  "settings": {}
+}
