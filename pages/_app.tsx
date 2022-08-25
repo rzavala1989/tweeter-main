@@ -1,10 +1,17 @@
+import React from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { AuthProvider } from '../contexts/AuthContext';
 import { ThemeContextProvider } from '../contexts/Theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      <ThemeContextProvider>
+        <Component {...pageProps} />
+      </ThemeContextProvider>
+    </AuthProvider>
+  );
 }
 
 export default MyApp;
