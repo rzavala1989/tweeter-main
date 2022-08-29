@@ -1,20 +1,18 @@
 import { GetServerSideProps } from 'next';
+import CustomBackground from '../../components/CustomBackground';
+import SignUpForm from '../../components/Form/SignUpForm';
+import NextSEO from '../../components/NextSEO';
+import { ensureAuthentication } from '../../utils/ensureAuthentication';
 
-import CustomBackground from '../components/CustomBackground';
-import SignInForm from '../components/Form/SignInForm';
-import NextSEO from 'src/components/NextSEO';
-
-import { ensureAuthentication } from 'src/utils/ensureAuthentication';
-
-const SignIn = () => {
+const SignUp = () => {
   return (
     <NextSEO
-      title='Tweeter - Sign In'
-      description='Sign in to Tweeter'
+      title='Tweeter - Sign Up'
+      description='Sign up for Tweeter'
       opacityTransition
     >
       <CustomBackground image={'/background/background.webp'}>
-        <SignInForm />
+        <SignUpForm />
       </CustomBackground>
     </NextSEO>
   );
@@ -35,4 +33,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export default SignIn;
+export default SignUp;
