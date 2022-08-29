@@ -1,7 +1,7 @@
 import React from 'react';
-import GlobalStyles from '../styles/GlobalStyle';
-import { AuthProvider } from '../contexts/AuthContext';
-import { ThemeContextProvider } from '../contexts/Theme';
+import GlobalStyles from '../src/styles/GlobalStyles';
+import { AuthProvider } from '../src/contexts/AuthContext';
+import { ThemeContextProvider } from '../src/contexts/Theme';
 import { AnimatePresence } from 'framer-motion';
 
 const withProviders = (story) => (
