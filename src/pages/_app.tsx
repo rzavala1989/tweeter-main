@@ -32,17 +32,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextNProgress color='#2F8000' startPosition={0.5} />
       <AuthProvider>
         <ThemeContextProvider>
-          {asPath === '/' || '/signup' ? (
+          {asPath === '/' || asPath === '/signup' ? (
             <>
               <AnimatePresence exitBeforeEnter>
-                <Component {...pageProps} />
+                <Component {...pageProps} key={asPath} />
               </AnimatePresence>
             </>
           ) : (
             <>
               <Header />
               <AnimatePresence exitBeforeEnter>
-                <Component {...pageProps} />
+                <Component {...pageProps} key={asPath} />
               </AnimatePresence>
               <ScrollToTop />
               <GlobalStyles />

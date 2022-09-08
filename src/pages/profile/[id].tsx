@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (!userId) {
     return {
       redirect: {
-        destination: '/profile/' + userId,
+        destination: '/',
         permanent: false,
       },
     };
